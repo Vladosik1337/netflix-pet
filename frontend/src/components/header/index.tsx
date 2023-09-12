@@ -1,4 +1,5 @@
 import HeaderLogo from "@/assets/HeaderLogo.png";
+import { ROUTES } from "@/constants";
 import { Box, Button, Flex, Image } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +11,7 @@ export const Header: React.FC<HeaderProps> = ({ isLogin }) => {
   const navigate = useNavigate();
 
   const handleAuthButton = () => {
-    navigate(isLogin ? "/sign-in" : "/sign-up");
+    navigate(isLogin ? ROUTES.LOGIN_PAGE : ROUTES.REGISTER_PAGE);
   };
 
   return (

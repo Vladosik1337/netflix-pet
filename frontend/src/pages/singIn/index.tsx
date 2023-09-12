@@ -1,4 +1,5 @@
 import { Background, Form, Header } from "@/components";
+import { ROUTES } from "@/constants";
 import { firebaseAuth } from "@/utils/firebaseConfig";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { onAuthStateChanged } from "firebase/auth";
@@ -8,7 +9,7 @@ export const SignIn = () => {
   const navigate = useNavigate();
 
   onAuthStateChanged(firebaseAuth, (currentUser) => {
-    if (currentUser) navigate("/");
+    if (currentUser) navigate(ROUTES.HOME_PAGE);
   });
 
   return (

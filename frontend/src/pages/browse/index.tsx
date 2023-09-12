@@ -1,3 +1,10 @@
+import { Navbar } from "@/components";
+import { Box } from "@chakra-ui/react";
+
 export const Browse = () => {
-  return <div>Browse</div>;
+  return (
+    <Box bg="#000">
+      <Navbar />
+    </Box>
+  );
 };
